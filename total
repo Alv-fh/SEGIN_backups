@@ -3,7 +3,7 @@ var=$(date "+%Y-%m-%d")
 var2=$(date "+%H-%M-%S")
 rutatotal=/home/vagrant/backups
 
-
+#Si existe el snapshot de total lo borra y luego hace la copia total
 if [ -e $rutatotal/total.st ]
 then
         rm $rutatotal/total.st
