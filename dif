@@ -1,0 +1,8 @@
+#!/bin/sh
+var=$(date "+%Y-%m-%d")
+var2=$(date "+%H-%M-%S")
+rutadif=/home/vagrant/backups
+
+cp $rutadif/total.st $rutadif/dif.st
+tar -g $rutadif/dif.st -jcvf $rutadif/copia_diferencial'_'$var'_'$var2".tar.gz" --absolute-names $rutadif/dif.st /var/www/html/*
+cp $rutadif/dif.st $rutadif/inc.st
